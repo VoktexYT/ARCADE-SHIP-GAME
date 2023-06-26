@@ -152,12 +152,16 @@ class Main extends Phaser.Scene {
         this.bar = this.physics.add.sprite(60, 100, 'spritesheet:bar', 0).setOrigin(0, 0);
 
         this.score = this.add.text(400, 130, '', {fontSize: 80, fontFamily: 'pixelMoney', color: "d0d058"});
+        this.score.setDepth(100);
+        this.score.setColor("#d0d058");
+
+
     }
 
     update() {
         this.bar.destroy();
-
         this.bar = this.physics.add.sprite(60, 100, 'spritesheet:bar', this.textureBar).setOrigin(0, 0);
+
         
         if (this.shipLife != 0) {
             this.score.text = this.score_int.toString();
