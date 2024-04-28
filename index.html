@@ -69,7 +69,11 @@
             }
         }
 
-        setInterval(resize, 1000)
+        window.addEventListener("resize", () => {
+            resize()
+        })
+
+        resize()
     </script>
     
 </body>
